@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next'; // 1. O tradutor entra aqui
 import { NeonButton } from '../ui/NeonButton';
 
 export const Header: React.FC = () => {
+  const { t, i18n } = useTranslation(); // 2. Ligamos o motor de tradução
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -11,11 +13,18 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Função que muda o idioma na hora
+  const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    i18n.changeLanguage(event.target.value);
+  };
+
+  // 3. Traduzindo os links usando as chaves do dicionário
+  // (O segundo texto é um "plano B" caso ele não ache a palavra no dicionário)
   const navLinks = [
-    { label: 'Platform', href: '#platform' },
-    { label: 'Solutions', href: '#solutions' },
-    { label: 'Pricing', href: '#pricing' },
-    { label: 'Docs', href: '#docs' }
+    { label: t('nav.platform', 'Plataforma'), href: '#platform' },
+    { label: t('nav.solutions', 'Soluções'), href: '#solutions' },
+    { label: t('nav.pricing', 'Preços'), href: '#pricing' },
+    { label: t('nav.docs', 'Docs'), href: '#docs' }
   ];
 
   return (
@@ -24,6 +33,8 @@ export const Header: React.FC = () => {
       ${scrolled ? 'bg-black/80 backdrop-blur-xl border-b border-white/5' : 'bg-transparent'}
     `}>
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        
+        {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
             <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,6 +46,7 @@ export const Header: React.FC = () => {
           </span>
         </a>
 
+        {/* Links do Desktop */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map(link => (
             <a key={link.label} href={link.href} className="text-sm text-slate-400 hover:text-white transition-colors">
@@ -43,11 +55,25 @@ export const Header: React.FC = () => {
           ))}
         </nav>
 
+        {/* Ações do Desktop: Seletor de Idioma + Botões */}
         <div className="hidden md:flex items-center gap-4">
-          <NeonButton variant="ghost">Login</NeonButton>
-          <NeonButton>Start Free Trial</NeonButton>
+          
+          {/* A CAIXINHA DE IDIOMAS ENTROU AQUI */}
+          <select 
+            onChange={changeLanguage} 
+            value={i18n.resolvedLanguage}
+            className="bg-white/5 border border-white/10 text-slate-300 text-sm rounded-md px-2 py-2 outline-none focus:border-emerald-500 cursor-pointer"
+          >
+            <option value="pt" className="bg-[#09090E]">🇧🇷 PT</option>
+            <option value="en" className="bg-[#09090E]">🇺🇸 EN</option>
+            <option value="es" className="bg-[#09090E]">🇪🇸 ES</option>
+          </select>
+
+          <NeonButton variant="ghost">{t('nav.login', 'Login')}</NeonButton>
+          <NeonButton>{t('nav.trial', 'Começar Grátis')}</NeonButton>
         </div>
 
+        {/* Botão Hambúrguer do Mobile */}
         <button className="md:hidden p-2 text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           <div className="w-6 h-5 flex flex-col justify-between">
             <span className={`w-full h-0.5 bg-current transition-transform ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
@@ -57,17 +83,32 @@ export const Header: React.FC = () => {
         </button>
       </div>
 
+      {/* Menu Mobile Aberto */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10">
           <nav className="px-6 py-4 space-y-4">
+            
+            {/* O SELETOR DE IDIOMAS TAMBÉM APARECE NO CELULAR */}
+            <div className="pb-4 border-b border-white/10">
+              <select 
+                onChange={changeLanguage} 
+                value={i18n.resolvedLanguage}
+                className="w-full bg-white/5 border border-white/10 text-slate-300 text-sm rounded-md px-3 py-2 outline-none focus:border-emerald-500 cursor-pointer"
+              >
+                <option value="pt" className="bg-[#09090E]">🇧🇷 Português</option>
+                <option value="en" className="bg-[#09090E]">🇺🇸 English</option>
+                <option value="es" className="bg-[#09090E]">🇪🇸 Español</option>
+              </select>
+            </div>
+
             {navLinks.map(link => (
               <a key={link.label} href={link.href} className="block text-slate-400 hover:text-white transition-colors" onClick={() => setMobileMenuOpen(false)}>
                 {link.label}
               </a>
             ))}
             <div className="pt-4 space-y-3">
-              <NeonButton variant="secondary" className="w-full">Login</NeonButton>
-              <NeonButton className="w-full">Start Free Trial</NeonButton>
+              <NeonButton variant="secondary" className="w-full">{t('nav.login', 'Login')}</NeonButton>
+              <NeonButton className="w-full">{t('nav.trial', 'Começar Grátis')}</NeonButton>
             </div>
           </nav>
         </div>

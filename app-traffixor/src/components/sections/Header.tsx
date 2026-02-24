@@ -19,12 +19,12 @@ export const Header: React.FC = () => {
   };
 
   // 3. Traduzindo os links usando as chaves do dicionário
-  // (O segundo texto é um "plano B" caso ele não ache a palavra no dicionário)
   const navLinks = [
-    { label: t('nav.platform', 'Plataforma'), href: '#platform' },
-    { label: t('nav.solutions', 'Soluções'), href: '#solutions' },
-    { label: t('nav.pricing', 'Preços'), href: '#pricing' },
-    { label: t('nav.docs', 'Docs'), href: '#docs' }
+    { label: t('nav.platform', 'Plataforma'), href: '#platform', isExternal: false },
+    { label: t('nav.solutions', 'Soluções'), href: '#solutions', isExternal: false },
+    { label: t('nav.pricing', 'Preços'), href: '#pricing', isExternal: false },
+    // Adicionamos a flag isExternal e o link do Notion aqui!
+    { label: t('nav.docs', 'Docs'), href: 'https://global-author-a12.notion.site/Traffixor-Docs-Motor-Neural-v3-0-300dbf1cb64280bf8c66e21273cf89aa', isExternal: true }
   ];
 
   return (
@@ -49,7 +49,14 @@ export const Header: React.FC = () => {
         {/* Links do Desktop */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map(link => (
-            <a key={link.label} href={link.href} className="text-sm text-slate-400 hover:text-white transition-colors">
+            <a 
+              key={link.label} 
+              href={link.href} 
+              // Se for externo (Docs), abre em nova aba. Se não, abre normal na mesma aba.
+              target={link.isExternal ? "_blank" : "_self"}
+              rel={link.isExternal ? "noopener noreferrer" : ""}
+              className="text-sm text-slate-400 hover:text-white transition-colors"
+            >
               {link.label}
             </a>
           ))}
@@ -102,7 +109,14 @@ export const Header: React.FC = () => {
             </div>
 
             {navLinks.map(link => (
-              <a key={link.label} href={link.href} className="block text-slate-400 hover:text-white transition-colors" onClick={() => setMobileMenuOpen(false)}>
+              <a 
+                key={link.label} 
+                href={link.href} 
+                target={link.isExternal ? "_blank" : "_self"}
+                rel={link.isExternal ? "noopener noreferrer" : ""}
+                className="block text-slate-400 hover:text-white transition-colors" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 {link.label}
               </a>
             ))}

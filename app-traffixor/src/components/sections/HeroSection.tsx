@@ -32,7 +32,11 @@ export const HeroSection: React.FC = () => {
           <NeonButton variant="primary" className="w-full sm:w-auto">
             {t('hero.cta_primary')}
           </NeonButton>
-          <NeonButton variant="secondary" className="w-full sm:w-auto">
+          <NeonButton 
+            variant="secondary" 
+            className="w-full sm:w-auto"
+            onClick={() => window.open('https://global-author-a12.notion.site/Traffixor-Docs-Motor-Neural-v3-0-300dbf1cb64280bf8c66e21273cf89aa', '_blank')}
+          >
             {t('hero.cta_secondary')}
           </NeonButton>
         </div>

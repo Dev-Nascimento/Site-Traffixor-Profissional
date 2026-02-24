@@ -101,11 +101,16 @@ export const NicheSolutionsSection: React.FC = () => {
 
                 <div className="space-y-3">
                    <p className="text-slate-300 text-sm">{t(`niche.${activeNiche}_desc`)}</p>
-                   <div className="pt-4">
-                     <button className="flex items-center gap-2 text-emerald-400 text-sm font-bold hover:gap-3 transition-all group-hover:text-emerald-300">
-                       {t('niche.btn')} {t(`niche.${activeNiche}_title`)} <ArrowRight size={16} />
-                     </button>
-                   </div>
+                  <div className="pt-4">
+                      <a 
+                        href="https://global-author-a12.notion.site/Traffixor-Docs-Motor-Neural-v3-0-300dbf1cb64280bf8c66e21273cf89aa" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-emerald-400 text-sm font-bold hover:gap-3 transition-all group-hover:text-emerald-300"
+                      >
+                        {t('niche.btn')} {t(`niche.${activeNiche}_title`)} <ArrowRight size={16} />
+                      </a>
+                    </div>
                 </div>
               </div>
             </GlassCard>

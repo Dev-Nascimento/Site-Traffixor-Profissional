@@ -26,9 +26,27 @@ export const Footer: React.FC = () => {
           </div>
           <div>
             <h4 className="text-white font-semibold mb-4 text-sm">{t('footer.legal')}</h4>
-            <ul className="space-y-2 text-sm text-slate-500">
-              <li>{t('footer.privacy')}</li>
-              <li>{t('footer.terms')}</li>
+            <ul className="space-y-2 mt-4">
+              <li>
+                <a
+                  href="https://charming-zydeco-20a.notion.site/Traffixor-Pol-ticas-de-Privacidade-31204384349f807aa8bed99c8ea5a5b5?source=copy_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
+                >
+                  Políticas de Privacidade
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://charming-zydeco-20a.notion.site/Traffixor-Termos-de-Uso-31204384349f800389b5db19f6a1ed99?source=copy_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-slate-400 hover:text-emerald-400 transition-colors"
+                >
+                  Termos de Uso
+                </a>
+              </li>
             </ul>
           </div>
         </div>

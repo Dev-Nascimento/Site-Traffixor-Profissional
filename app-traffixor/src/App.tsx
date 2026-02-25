@@ -9,6 +9,7 @@ import { ROISimulatorSection } from './components/sections/ROISimulatorSection';
 import { PricingSection } from './components/sections/PricingSection';
 import { Footer } from './components/sections/Footer';
 import { NotFound } from './components/pages/NotFound'; // 1. Nossa nova tela importada aqui!
+import { ComparisonSection } from './components/sections/ComparisonSection';
 
 const App: React.FC = () => {
   // 2. O Interceptador: Se a URL for /login ou /404, ele trava e mostra o terminal restrito.
@@ -29,6 +30,7 @@ const App: React.FC = () => {
           <HeroSection />
           <AuthoritySection />
           <ProblemSection />
+          <ComparisonSection />
           <NicheSolutionsSection />
           <ROISimulatorSection />
           <PricingSection />

@@ -1,17 +1,44 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next'; // Importamos o tradutor
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { NeonButton } from '../ui/NeonButton';
 
 export const HeroSection: React.FC = () => {
-  const { t } = useTranslation(); // Ligamos o tradutor
+  const { t } = useTranslation();
+  
+  // 1. Estados para o efeito de digitação
+  const [typedText, setTypedText] = useState('');
+  
+  // Puxando o texto do arquivo JSON corretamente
+  const enemyText = t('hero.enemy');
+
+  // 2. O Motor de Digitação
+  useEffect(() => {
+    let currentText = '';
+    let currentIndex = 0;
+    
+    setTypedText('');
+    
+    const interval = setInterval(() => {
+      // Garante que enemyText existe antes de tentar digitar
+      if (enemyText && currentIndex < enemyText.length) {
+        currentText += enemyText[currentIndex];
+        setTypedText(currentText);
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 40);
+
+    return () => clearInterval(interval);
+  }, [enemyText]); // Se o idioma for trocado, a digitação recomeça
 
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden px-6">
       <div className="max-w-7xl mx-auto relative z-10 text-center">
         
         {/* Badge superior */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-8 animate-pulse">
-          <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-mono mb-8 animate-pulse">
+          <div className="w-2 h-2 rounded-full bg-red-500 animate-ping" />
           {t('hero.badge')}
         </div>
 
@@ -23,23 +50,39 @@ export const HeroSection: React.FC = () => {
         </h1>
 
         {/* Subtítulo */}
-        <p className="mt-6 text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10">
+        <p className="mt-6 text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-6">
           {t('hero.subtitle')}
         </p>
+
+        {/* O Inimigo Comum com Efeito de Digitação + Cursor Piscando */}
+        <div className="h-8 mb-10 flex items-center justify-center">
+          <p className="text-sm font-mono text-emerald-500/80">
+            {typedText}
+            <span className="animate-pulse ml-1 text-emerald-400">_</span>
+          </p>
+        </div>
 
         {/* Botões */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <NeonButton 
-            variant="primary"
+            variant="primary" 
             className="w-full sm:w-auto"
-            onClick={() => window.open('https://wa.me/5521984834409?text=Ol%C3%A1%21+Quero+iniciar+a+minha+automação+com+a+Traffixor+na+minha+opera%C3%A7%C3%A3o.', '_blank')}
+            onClick={() => window.open('https://wa.me/5521984834409?text=Ol%C3%A1%21+Quero+iniciar+a+automa%C3%A7%C3%A3o+na+minha+empresa.', '_blank')}
           >
             {t('hero.cta_primary')}
           </NeonButton>
+          
           <NeonButton 
             variant="secondary" 
             className="w-full sm:w-auto"
-            onClick={() => window.open('https://global-author-a12.notion.site/Traffixor-Docs-Motor-Neural-v3-0-300dbf1cb64280bf8c66e21273cf89aa', '_blank')}
+            onClick={() => {
+              const roiSection = document.getElementById('roi-simulator');
+              if (roiSection) {
+                roiSection.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.location.href = '#roi-simulator';
+              }
+            }}
           >
             {t('hero.cta_secondary')}
           </NeonButton>

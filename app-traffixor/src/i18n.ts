@@ -6,11 +6,29 @@ const resources = {
   pt: {
     translation: {
       nav: { solutions: "Soluções", simulator: "Simulador de ROI", pricing: "Preços", login: "Login", trial: "Começar Grátis" },
-      hero: { badge: "MOTOR NEURAL V3.0 ATIVO", title: "Automação Avançada para Escalar Operações", subtitle: "A infraestrutura definitiva para o seu negócio. Elimine gargalos manuais, conecte seus dados em tempo real e acelere seu faturamento com inteligência artificial.", cta_primary: "Iniciar Automação", cta_secondary: "Ver Documentação" },
+      hero: { 
+        badge: "O FIM DOS SISTEMAS DESCONECTADOS", 
+        title: "Transforme Dados em Receita com Automação Neural.", 
+        subtitle: "Integre marketing, CRM e funis em uma única engine inteligente que aumenta sua conversão, reduz o CAC e acelera o faturamento.", 
+        enemy: "> Planilhas e integrações quebradas estão drenando seu lucro agora mesmo.",
+        cta_primary: "Iniciar Automação", 
+        cta_secondary: "Calcular Meu ROI" 
+      },
       authority: { events: "eventos/dia", latency: "latência", data: "Proteção de Dados", ready: "Pronto" },
       problem: { title: "Operações rodam em infraestrutura fragmentada", subtitle: "Sistemas desconectados criam atritos que matam a velocidade de crescimento.", card1_title: "Silos de Dados Impenetráveis", card1_desc: "Dados críticos de clientes presos em plataformas isoladas.", card2_title: "Processos Manuais Lentos", card2_desc: "Fluxos de receita que dependem de intervenção humana.", card3_title: "Stack Desconectado", card3_desc: "Uma colcha de retalhos de integrações que quebram silenciosamente." },
       niche: { title: "Arquitetura adaptável para o seu mercado", subtitle: "Funcionalidades construídas para resolver desafios específicos.", b2b_title: "B2B & SaaS", b2b_focus: "Eficiência de Pipeline", b2b_desc: "Qualifique leads complexos automaticamente e acelere ciclos de vendas longos.", b2c_title: "B2C & Varejo", b2c_focus: "Volume & Personalização", b2c_desc: "Recupere carrinhos em tempo real e hiper-personalize a jornada do cliente.", info_title: "Infoprodutores", info_focus: "Orquestração de Lançamentos", info_desc: "Automatize lançamentos de 6 e 7 dígitos. Integre Hotmart/Eduzz direto com sua área de membros.", btn: "Ver Documentação para", engine: "// Executando engine para", flow: "Fluxo otimizado pronto para escala." },
-      roi: { title: "Neural ROI Simulator", subtitle: "Calcule o impacto financeiro da automação inteligente na sua operação e veja quanto a Traffixor pode escalar seu faturamento.", contacts: "Contatos Mensais", ticket: "Ticket Médio (R$)", conversion: "Taxa de Conversão Atual", btn_calc: "Calcular Projeção de Crescimento", result_title: "Aumento Anual Projetado", result_sub: "Com a qualificação e automação da Traffixor", btn_activate: "Ativar esse Crescimento Agora", empty: "Ajuste os parâmetros e veja a mágica dos dados acontecer." },
+      roi: { 
+        title: "Descubra quanto dinheiro você está perdendo.", 
+        subtitle: "Ajuste os números da sua operação atual e veja o tamanho do vazamento de lucro que a falta de orquestração inteligente está causando.", 
+        contacts: "Leads/Contatos por mês", 
+        ticket: "Ticket Médio (R$)", 
+        conversion: "Taxa de Conversão Atual", 
+        btn_calc: "Revelar Lucro Oculto", 
+        result_title: "Você está deixando na mesa aproximadamente:", 
+        result_sub: "Isso representa uma perda anual projetada por depender de processos manuais e integrações frágeis.", 
+        btn_activate: "Estancar Sangramento Financeiro", 
+        empty: "Configure os números ao lado para calcular o tamanho do seu prejuízo invisível." 
+      },
       pricing: { 
         title: "Planos Escaláveis", 
         subtitle: "Escolha a infraestrutura ideal para a fase atual do seu negócio.", 
@@ -28,11 +46,29 @@ const resources = {
   en: {
     translation: {
       nav: { solutions: "Solutions", simulator: "ROI Simulator", pricing: "Pricing", login: "Login", trial: "Start Free Trial" },
-      hero: { badge: "NEURAL ENGINE V3.0 ACTIVE", title: "Advanced Automation to Scale Operations", subtitle: "The ultimate infrastructure for your business. Eliminate manual bottlenecks, connect your data in real-time, and accelerate revenue with AI.", cta_primary: "Start Automation", cta_secondary: "View Documentation" },
+      hero: { 
+        badge: "THE END OF DISCONNECTED SYSTEMS", 
+        title: "Turn Data into Revenue with Neural Automation.", 
+        subtitle: "Integrate marketing, CRM, and funnels into a single intelligent engine that increases conversion, reduces CAC, and accelerates revenue.", 
+        enemy: "> Broken spreadsheets and integrations are draining your profits right now.",
+        cta_primary: "Start Automation", 
+        cta_secondary: "Calculate My ROI" 
+      },
       authority: { events: "events/day", latency: "latency", data: "Data Protection", ready: "Ready" },
       problem: { title: "Operations run on fragmented infrastructure", subtitle: "Disconnected systems create friction that kills growth velocity.", card1_title: "Impenetrable Data Silos", card1_desc: "Critical customer data trapped in isolated platforms.", card2_title: "Slow Manual Processes", card2_desc: "Revenue-critical workflows that depend on human intervention.", card3_title: "Disconnected Stack", card3_desc: "A patchwork of integrations that break silently." },
       niche: { title: "Adaptable architecture for your market", subtitle: "Features built to solve your specific operational challenges.", b2b_title: "B2B & SaaS", b2b_focus: "Pipeline Efficiency", b2b_desc: "Automatically qualify complex leads and accelerate long sales cycles.", b2c_title: "B2C & Retail", b2c_focus: "Volume & Personalization", b2c_desc: "Recover carts in real-time and hyper-personalize the customer journey.", info_title: "Digital Creators", info_focus: "Launch Orchestration", info_desc: "Automate 6 and 7-figure product launches. Integrate checkout platforms directly.", btn: "View Documentation for", engine: "// Running engine for", flow: "Optimized flow ready for scale." },
-      roi: { title: "Neural ROI Simulator", subtitle: "Calculate the financial impact of intelligent automation and see how Traffixor can scale your revenue.", contacts: "Monthly Contacts", ticket: "Average Ticket ($)", conversion: "Current Conversion Rate", btn_calc: "Calculate Growth Projection", result_title: "Projected Annual Increase", result_sub: "With Traffixor's qualification and automation", btn_activate: "Activate This Growth Now", empty: "Adjust the parameters and watch the data magic happen." },
+      roi: { 
+        title: "Discover how much money you are losing.", 
+        subtitle: "Adjust your current operation numbers and see the size of the profit leak caused by the lack of intelligent orchestration.", 
+        contacts: "Leads/Contacts per month", 
+        ticket: "Average Ticket ($)", 
+        conversion: "Current Conversion Rate", 
+        btn_calc: "Reveal Hidden Profit", 
+        result_title: "You are leaving on the table approximately:", 
+        result_sub: "This represents a projected annual loss for relying on manual processes and fragile integrations.", 
+        btn_activate: "Stop Financial Bleeding", 
+        empty: "Configure the numbers to calculate the size of your invisible loss." 
+      },
       pricing: { 
         title: "Scalable Plans", 
         subtitle: "Choose the ideal infrastructure for your current business stage.", 
@@ -50,11 +86,29 @@ const resources = {
   es: {
     translation: {
       nav: { solutions: "Soluciones", simulator: "Simulador de ROI", pricing: "Precios", login: "Iniciar Sesión", trial: "Prueba Gratis" },
-      hero: { badge: "MOTOR NEURAL V3.0 ACTIVO", title: "Automatización Avanzada para Escalar", subtitle: "La infraestructura definitiva para tu negocio. Elimina cuellos de botella manuales, conecta tus datos y acelera tus ingresos.", cta_primary: "Iniciar Automatización", cta_secondary: "Ver Documentación" },
+      hero: { 
+        badge: "EL FIN DE LOS SISTEMAS DESCONECTADOS", 
+        title: "Transforma Datos en Ingresos con Automatización Neuronal.", 
+        subtitle: "Integra marketing, CRM y embudos en un solo motor inteligente que aumenta tu conversión, reduce el CAC y acelera la facturación.", 
+        enemy: "> Las hojas de cálculo e integraciones rotas están drenando tus ganancias ahora mismo.",
+        cta_primary: "Iniciar Automatización", 
+        cta_secondary: "Calcular Mi ROI" 
+      },
       authority: { events: "eventos/día", latency: "latencia", data: "Protección de Dados", ready: "Listo" },
       problem: { title: "Infraestructura fragmentada", subtitle: "Los sistemas desconectados crean fricción que frena el crecimiento.", card1_title: "Silos de Datos", card1_desc: "Datos críticos atrapados en plataformas aisladas.", card2_title: "Procesos Lentos", card2_desc: "Flujos de ingresos que dependen de intervención humana.", card3_title: "Stack Desconectado", card3_desc: "Un mosaico de integraciones que se rompen en silencio." },
       niche: { title: "Arquitectura adaptable", subtitle: "Funcionalidades construidas para resolver tus desafíos.", b2b_title: "B2B & SaaS", b2b_focus: "Eficiencia de Pipeline", b2b_desc: "Califica leads complejos automáticamente y acelera ciclos de ventas.", b2c_title: "B2C & Retail", b2c_focus: "Volumen y Personalización", b2c_desc: "Recupera carritos en tiempo real y personaliza el viaje del cliente.", info_title: "Infoproductores", info_focus: "Lanzamientos", info_desc: "Automatiza lanzamientos de 6 y 7 cifras. Integra plataformas de pago directo.", btn: "Ver Documentación para", engine: "// Ejecutando motor para", flow: "Flujo optimizado listo para escalar." },
-      roi: { title: "Simulador de ROI Neural", subtitle: "Calcula el impacto financiero de la automatización inteligente en tu operación.", contacts: "Contactos Mensuales", ticket: "Ticket Promedio", conversion: "Tasa de Conversión", btn_calc: "Calcular Proyección", result_title: "Aumento Anual Proyectado", result_sub: "Con la automatización de Traffixor", btn_activate: "Activar Crecimiento Ahora", empty: "Ajusta los parámetros y mira la magia suceder." },
+      roi: { 
+        title: "Descubre cuánto dinero estás perdiendo.", 
+        subtitle: "Ajusta los números de tu operación actual y mira el tamaño de la fuga de ganancias causada por la falta de orquestación inteligente.", 
+        contacts: "Leads/Contactos por mes", 
+        ticket: "Ticket Promedio", 
+        conversion: "Tasa de Conversión Actual", 
+        btn_calc: "Revelar Beneficio Oculto", 
+        result_title: "Estás dejando en la mesa aproximadamente:", 
+        result_sub: "Esto representa una pérdida anual proyectada por depender de procesos manuales e integraciones frágiles.", 
+        btn_activate: "Detener Sangrado Financiero", 
+        empty: "Configura los números para calcular el tamaño de tu pérdida invisible." 
+      },
       pricing: { 
         title: "Planes Escalables", 
         subtitle: "Elige la infraestructura ideal para tu negocio.", 

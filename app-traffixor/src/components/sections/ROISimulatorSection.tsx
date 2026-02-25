@@ -54,7 +54,13 @@ export const ROISimulatorSection: React.FC = () => {
                 <div className="space-y-4">
                   <div className="h-4 bg-white/5 rounded-full overflow-hidden"><div className="h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full" style={{ width: '100%' }} /></div>
                 </div>
-                <NeonButton className="w-full">{t('roi.btn_activate')}</NeonButton>
+                <NeonButton
+                  variant="primary"
+                  className="w-full sm:w-auto mt-6" // (mantenha as classes que já estiverem aí)
+                  onClick={() => window.open('https://wa.me/5521984834409?text=Ol%C3%A1%21+Quero+ativar+a+infraestrutura+da+Traffixor+na+minha+opera%C3%A7%C3%A3o.', '_blank')}
+                >
+                  Começar esse crescimento agora
+                </NeonButton>
               </div>
             ) : (
               <div className="text-center py-12"><p className="text-slate-400">{t('roi.empty')}</p></div>

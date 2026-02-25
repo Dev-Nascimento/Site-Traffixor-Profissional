@@ -11,23 +11,10 @@ const resources = {
       problem: { title: "Operações rodam em infraestrutura fragmentada", subtitle: "Sistemas desconectados criam atritos que matam a velocidade de crescimento.", card1_title: "Silos de Dados Impenetráveis", card1_desc: "Dados críticos de clientes presos em plataformas isoladas.", card2_title: "Processos Manuais Lentos", card2_desc: "Fluxos de receita que dependem de intervenção humana.", card3_title: "Stack Desconectado", card3_desc: "Uma colcha de retalhos de integrações que quebram silenciosamente." },
       comparison: { title: "Traffixor vs Ferramentas Tradicionais", subtitle: "Por que os líderes de mercado estão abandonando os 'remendos' e migrando para uma infraestrutura neural unificada.", traditional: "Ferramentas Comuns", traffixor: "Traffixor", row1_bad: "Integrações frágeis que quebram", row1_good: "Engine neural unificada e resiliente", row2_bad: "Workflows manuais e engessados", row2_good: "Automação inteligente de ponta a ponta", row3_bad: "Dados fragmentados em silos", row3_good: "Orquestração de dados em tempo real" },
       practical: { title: "O que exatamente a Traffixor faz?", subtitle: "Saia do campo abstrato. Veja como o Motor Neural opera no dia a dia da sua empresa para multiplicar resultados reais.", card1_title: "Follow-ups Neurais", card1_desc: "Automatize pontos de contato baseados no comportamento do lead. Nunca mais perca um fechamento por esquecimento.", card2_title: "Sincronização CRM ↔ Ads", card2_desc: "Retroalimente plataformas de anúncios com dados de conversões reais do seu CRM em milissegundos para baixar seu CAC.", card3_title: "Lead Scoring Inteligente", card3_desc: "O sistema pontua quem está quente para comprar e avisa o seu time de vendas (ou dispara oferta) apenas na hora certa.", card4_title: "Disparos Comportamentais", card4_desc: "O cliente abandonou o carrinho ou assistiu 80% do vídeo? A Traffixor dispara gatilhos imediatos para recuperação.", card5_title: "Otimização de Funil", card5_desc: "Orquestre o tráfego e crie rotas condicionais dinâmicas, guiando cada lead para a conversão mais lucrativa." },
+      results: { title: "Resultados Reais de Mercado", subtitle: "O impacto no caixa quando você substitui o caos manual pela orquestração inteligente da Traffixor.", case1_title: "E-commerce & Varejo", case1_metric: "+42%", case1_desc: "Aumento médio no ROAS através de recuperação em tempo real.", case2_title: "SaaS & B2B", case2_metric: "-28%", case2_desc: "Redução direta no Custo de Aquisição de Clientes (CAC).", case3_title: "Infoprodutores", case3_metric: "+65%", case3_desc: "Salto na conversão de lançamentos e funis perpétuos." },
       niche: { title: "Arquitetura adaptável para o seu mercado", subtitle: "Funcionalidades construídas para resolver desafios específicos.", b2b_title: "B2B & SaaS", b2b_focus: "Eficiência de Pipeline", b2b_desc: "Qualifique leads complexos automaticamente e acelere ciclos de vendas longos.", b2c_title: "B2C & Varejo", b2c_focus: "Volume & Personalização", b2c_desc: "Recupere carrinhos em tempo real e hiper-personalize a jornada do cliente.", info_title: "Infoprodutores", info_focus: "Orquestração de Lançamentos", info_desc: "Automatize lançamentos de 6 e 7 dígitos. Integre Hotmart/Eduzz direto com sua área de membros.", btn: "Ver Documentação para", engine: "// Executando engine para", flow: "Fluxo otimizado pronto para escala." },
       roi: { title: "Descubra quanto dinheiro você está perdendo.", subtitle: "Ajuste os números da sua operação atual e veja o tamanho do vazamento de lucro que a falta de orquestração inteligente está causando.", contacts: "Leads/Contatos por mês", ticket: "Ticket Médio (R$)", conversion: "Taxa de Conversão Atual", btn_calc: "Revelar Lucro Oculto", result_title: "Você está deixando na mesa aproximadamente:", result_sub: "Isso representa uma perda anual projetada por depender de processos manuais e integrações frágeis.", btn_activate: "Estancar Sangramento Financeiro", empty: "Configure os números ao lado para calcular o tamanho do seu prejuízo invisível." },
-      pricing: { 
-        title: "Invista na sua Infraestrutura", 
-        subtitle: "A automação que se paga nos primeiros dias. Escolha o plano ideal para escalar a sua operação.", 
-        popular: "Mais Escolhido", 
-        month: "/mês", 
-        year: "/ano",
-        monthly: "Mensal",
-        annual: "Anual",
-        save: "Poupa 20%",
-        btn_start: "Iniciar Automação",
-        daily: "Apenas R$",
-        daily_suffix: "/dia",
-        pro_badge: "Para empresas em crescimento",
-        enterprise_badge: "Para operações críticas e alto volume"
-      },
+      pricing: { title: "Invista na sua Infraestrutura", subtitle: "A automação que se paga nos primeiros dias. Escolha o plano ideal para escalar a sua operação.", popular: "Mais Escolhido", month: "/mês", year: "/ano", monthly: "Mensal", annual: "Anual", save: "Poupa 20%", btn_start: "Iniciar Automação", daily: "Apenas R$", daily_suffix: "/dia", pro_badge: "Para empresas em crescimento", enterprise_badge: "Para operações críticas e alto volume" },
       footer: { desc: "Orquestrando o futuro do marketing digital através de automação neural.", platform: "Plataforma", legal: "Legal", privacy: "Privacidade", terms: "Termos de Uso", rights: "Todos os direitos reservados." }
     }
   },
@@ -39,23 +26,10 @@ const resources = {
       problem: { title: "Operations run on fragmented infrastructure", subtitle: "Disconnected systems create friction that kills growth velocity.", card1_title: "Impenetrable Data Silos", card1_desc: "Critical customer data trapped in isolated platforms.", card2_title: "Slow Manual Processes", card2_desc: "Revenue-critical workflows that depend on human intervention.", card3_title: "Disconnected Stack", card3_desc: "A patchwork of integrations that break silently." },
       comparison: { title: "Traffixor vs Traditional Tools", subtitle: "Why market leaders are abandoning 'patches' and migrating to a unified neural infrastructure.", traditional: "Common Tools", traffixor: "Traffixor", row1_bad: "Fragile integrations that break", row1_good: "Unified and resilient neural engine", row2_bad: "Rigid and manual workflows", row2_good: "End-to-end intelligent automation", row3_bad: "Data fragmented in silos", row3_good: "Real-time data orchestration" },
       practical: { title: "What exactly does Traffixor do?", subtitle: "Step out of the abstract. See how the Neural Engine operates in your company's daily routine to multiply real results.", card1_title: "Neural Follow-ups", card1_desc: "Automate touchpoints based on exact lead behavior.", card2_title: "CRM ↔ Ads Sync", card2_desc: "Feed ad platforms with real conversion data from your CRM in milliseconds.", card3_title: "Intelligent Lead Scoring", card3_desc: "Score hot leads and alert your sales team at the exact right moment.", card4_title: "Behavioral Triggers", card4_desc: "Instant triggers for abandoned carts or video views.", card5_title: "Funnel Optimization", card5_desc: "Orchestrate traffic and create dynamic conditional routes for higher profitability." },
+      results: { title: "Real Market Results", subtitle: "The cash impact when you replace manual chaos with Traffixor's intelligent orchestration.", case1_title: "E-commerce & Retail", case1_metric: "+42%", case1_desc: "Average increase in ROAS through real-time recovery.", case2_title: "SaaS & B2B", case2_metric: "-28%", case2_desc: "Direct reduction in Customer Acquisition Cost (CAC).", case3_title: "Digital Creators", case3_metric: "+65%", case3_desc: "Conversion jump in product launches and evergreen funnels." },
       niche: { title: "Adaptable architecture for your market", subtitle: "Features built to solve your specific operational challenges.", b2b_title: "B2B & SaaS", b2b_focus: "Pipeline Efficiency", b2b_desc: "Automatically qualify complex leads and accelerate long sales cycles.", b2c_title: "B2C & Retail", b2c_focus: "Volume & Personalization", b2c_desc: "Recover carts in real-time and hyper-personalize the customer journey.", info_title: "Digital Creators", info_focus: "Launch Orchestration", info_desc: "Automate 6 and 7-figure product launches. Integrate checkout platforms directly.", btn: "View Documentation for", engine: "// Running engine for", flow: "Optimized flow ready for scale." },
       roi: { title: "Discover how much money you are losing.", subtitle: "Adjust your current operation numbers and see the size of the profit leak caused by the lack of intelligent orchestration.", contacts: "Leads/Contacts per month", ticket: "Average Ticket ($)", conversion: "Current Conversion Rate", btn_calc: "Reveal Hidden Profit", result_title: "You are leaving on the table approximately:", result_sub: "This represents a projected annual loss for relying on manual processes and fragile integrations.", btn_activate: "Stop Financial Bleeding", empty: "Configure the numbers to calculate the size of your invisible loss." },
-      pricing: { 
-        title: "Invest in your Infrastructure", 
-        subtitle: "Automation that pays for itself in days. Choose the ideal plan to scale your operation.", 
-        popular: "Most Popular", 
-        month: "/mo", 
-        year: "/yr",
-        monthly: "Monthly",
-        annual: "Annual",
-        save: "Save 20%",
-        btn_start: "Start Automation",
-        daily: "Only $",
-        daily_suffix: "/day",
-        pro_badge: "For growing companies",
-        enterprise_badge: "For critical operations & high volume"
-      },
+      pricing: { title: "Invest in your Infrastructure", subtitle: "Automation that pays for itself in days. Choose the ideal plan to scale your operation.", popular: "Most Popular", month: "/mo", year: "/yr", monthly: "Monthly", annual: "Annual", save: "Save 20%", btn_start: "Start Automation", daily: "Only $", daily_suffix: "/day", pro_badge: "For growing companies", enterprise_badge: "For critical operations & high volume" },
       footer: { desc: "Orchestrating the future of digital marketing through neural automation.", platform: "Platform", legal: "Legal", privacy: "Privacy", terms: "Terms of Use", rights: "All rights reserved." }
     }
   },
@@ -67,23 +41,10 @@ const resources = {
       problem: { title: "Infraestructura fragmentada", subtitle: "Los sistemas desconectados crean fricción que frena el crecimiento.", card1_title: "Silos de Datos", card1_desc: "Datos críticos atrapados en plataformas aisladas.", card2_title: "Procesos Lentos", card2_desc: "Flujos de ingresos que dependen de intervención humana.", card3_title: "Stack Desconectado", card3_desc: "Un mosaico de integraciones que se rompen en silencio." },
       comparison: { title: "Traffixor vs Herramientas Tradicionales", subtitle: "Por qué los líderes del mercado están abandonando los 'parches' y migrando a una infraestructura neuronal unificada.", traditional: "Herramientas Comunes", traffixor: "Traffixor", row1_bad: "Integraciones frágiles que se rompen", row1_good: "Motor neuronal unificado y resistente", row2_bad: "Flujos de trabajo manuales y rígidos", row2_good: "Automatización inteligente de extremo a extremo", row3_bad: "Datos fragmentados en silos", row3_good: "Orquestación de datos en tiempo real" },
       practical: { title: "¿Qué hace exactamente Traffixor?", subtitle: "Sal del campo abstracto. Mira cómo el Motor Neuronal opera en el día a día de tu empresa para multiplicar resultados.", card1_title: "Follow-ups Neuronales", card1_desc: "Automatiza puntos de contacto basados en el comportamiento del lead.", card2_title: "Sincronización CRM ↔ Ads", card2_desc: "Alimenta plataformas de anuncios con datos de conversiones reales.", card3_title: "Lead Scoring Inteligente", card3_desc: "Puntúa leads calientes y alerta a ventas en el momento exacto.", card4_title: "Disparos Comportamentales", card4_desc: "Gatillos inmediatos para carritos abandonados o vistas de video.", card5_title: "Optimización de Embudo", card5_desc: "Orquesta el tráfico y crea rutas condicionales para mayor rentabilidad." },
+      results: { title: "Resultados Reales de Mercado", subtitle: "El impacto en efectivo cuando reemplazas el caos manual por la orquestación inteligente de Traffixor.", case1_title: "E-commerce & Retail", case1_metric: "+42%", case1_desc: "Aumento promedio en ROAS mediante recuperación en tiempo real.", case2_title: "SaaS & B2B", case2_metric: "-28%", case2_desc: "Reducción directa en el Costo de Adquisición de Clientes (CAC).", case3_title: "Infoproductores", case3_metric: "+65%", case3_desc: "Salto en la conversión de lanzamientos y embudos perpetuos." },
       niche: { title: "Arquitectura adaptable", subtitle: "Funcionalidades construidas para resolver tus desafíos.", b2b_title: "B2B & SaaS", b2b_focus: "Eficiencia de Pipeline", b2b_desc: "Califica leads complejos automáticamente y acelera ciclos de ventas.", b2c_title: "B2C & Retail", b2c_focus: "Volumen y Personalización", b2c_desc: "Recupera carritos en tiempo real y personaliza el viaje del cliente.", info_title: "Infoproductores", info_focus: "Lanzamientos", info_desc: "Automatiza lanzamientos de 6 y 7 cifras. Integra plataformas de pago directo.", btn: "Ver Documentación para", engine: "// Ejecutando motor para", flow: "Flujo optimizado listo para escalar." },
       roi: { title: "Descubre cuánto dinero estás perdiendo.", subtitle: "Ajusta los números de tu operación actual y mira el tamaño de la fuga de ganancias causada por la falta de orquestación inteligente.", contacts: "Leads/Contactos por mes", ticket: "Ticket Promedio", conversion: "Tasa de Conversión Actual", btn_calc: "Revelar Beneficio Oculto", result_title: "Estás dejando en la mesa aproximadamente:", result_sub: "Esto representa una pérdida anual proyectada por depender de procesos manuales e integraciones frágiles.", btn_activate: "Detener Sangrado Financiero", empty: "Configura los números para calcular el tamaño de tu pérdida invisible." },
-      pricing: { 
-        title: "Invierte en tu Infraestructura", 
-        subtitle: "La automatización que se paga en días. Elige el plan ideal para escalar tu operación.", 
-        popular: "Más Popular", 
-        month: "/mes", 
-        year: "/año",
-        monthly: "Mensual",
-        annual: "Anual",
-        save: "Ahorra 20%",
-        btn_start: "Iniciar Automatización",
-        daily: "Solo $",
-        daily_suffix: "/día",
-        pro_badge: "Para empresas en crecimiento",
-        enterprise_badge: "Para operaciones críticas y alto volumen"
-      },
+      pricing: { title: "Invierte en tu Infraestructura", subtitle: "La automatización que se paga en días. Elige el plan ideal para escalar tu operación.", popular: "Más Popular", month: "/mes", year: "/año", monthly: "Mensual", annual: "Anual", save: "Ahorra 20%", btn_start: "Iniciar Automatización", daily: "Solo $", daily_suffix: "/día", pro_badge: "Para empresas en crecimiento", enterprise_badge: "Para operaciones críticas y alto volumen" },
       footer: { desc: "Orquestando el futuro del marketing digital a través de automatización neuronal.", platform: "Plataforma", legal: "Legal", privacy: "Privacidad", terms: "Términos de Uso", rights: "Todos los derechos reservados." }
     }
   }

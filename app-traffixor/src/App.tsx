@@ -12,6 +12,8 @@ import { NotFound } from './components/pages/NotFound'; // 1. Nossa nova tela im
 import { ComparisonSection } from './components/sections/ComparisonSection';
 import { PracticalUseSection } from './components/sections/PracticalUseSection';
 import { ResultsSection } from './components/sections/ResultsSection';
+import { SetupPremiumSection } from './components/sections/SetupPremiumSection';
+import { LeadCaptureSection } from './components/sections/LeadCaptureSection';
 
 const App: React.FC = () => {
   // 2. O Interceptador: Se a URL for /login ou /404, ele trava e mostra o terminal restrito.
@@ -38,6 +40,8 @@ const App: React.FC = () => {
           <PracticalUseSection />
           <ROISimulatorSection />
           <PricingSection />
+          <SetupPremiumSection />
+          <LeadCaptureSection />
         </main>
 
         <Footer />

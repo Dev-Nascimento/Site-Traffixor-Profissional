@@ -29,7 +29,11 @@ export const HeroSection: React.FC = () => {
 
         {/* Botões */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <NeonButton variant="primary" className="w-full sm:w-auto">
+          <NeonButton 
+            variant="primary"
+            className="w-full sm:w-auto"
+            onClick={() => window.open('https://wa.me/5521984834409?text=Ol%C3%A1%21+Quero+iniciar+a+minha+automação+com+a+Traffixor+na+minha+opera%C3%A7%C3%A3o.', '_blank')}
+          >
             {t('hero.cta_primary')}
           </NeonButton>
           <NeonButton 

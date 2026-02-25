@@ -76,8 +76,13 @@ export const Header: React.FC = () => {
             <option value="es" className="bg-[#09090E]">🇪🇸 ES</option>
           </select>
 
-          <NeonButton variant="ghost">{t('nav.login', 'Login')}</NeonButton>
-          <NeonButton>{t('nav.trial', 'Começar Grátis')}</NeonButton>
+          <NeonButton variant="ghost" onClick={() => window.location.href = '/login'}>
+            {t('nav.login', 'Login')}
+          </NeonButton>
+
+          <NeonButton onClick={() => window.open('https://wa.me/5521984834409?text=Ol%C3%A1%21+Quero+começar+a+minha+automação+com+a+Traffixor%C3%A7%C3%A3o.', '_blank')}>
+            {t('nav.trial', 'Começar Grátis')}
+          </NeonButton>
         </div>
 
         {/* Botão Hambúrguer do Mobile */}

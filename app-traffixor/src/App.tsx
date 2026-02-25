@@ -6,10 +6,18 @@ import { AuthoritySection } from './components/sections/AuthoritySection';
 import { ProblemSection } from './components/sections/ProblemSection';
 import { NicheSolutionsSection } from './components/sections/NicheSolutionsSection';
 import { ROISimulatorSection } from './components/sections/ROISimulatorSection';
-import { PricingSection } from './components/sections/PricingSection'; // Nova Peça
-import { Footer } from './components/sections/Footer';                 // Nova Peça
+import { PricingSection } from './components/sections/PricingSection';
+import { Footer } from './components/sections/Footer';
+import { NotFound } from './components/pages/NotFound'; // 1. Nossa nova tela importada aqui!
 
 const App: React.FC = () => {
+  // 2. O Interceptador: Se a URL for /login ou /404, ele trava e mostra o terminal restrito.
+  const currentPath = window.location.pathname;
+  if (currentPath === '/login' || currentPath === '/404') {
+    return <NotFound />;
+  }
+
+  // 3. Se for a URL normal (/), o site carrega a vitrine completa.
   return (
     <div className="bg-[#09090E] min-h-screen text-white selection:bg-emerald-500/30 font-sans">
       <NeuralBackground />

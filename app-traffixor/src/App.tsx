@@ -8,21 +8,31 @@ import { NicheSolutionsSection } from './components/sections/NicheSolutionsSecti
 import { ROISimulatorSection } from './components/sections/ROISimulatorSection';
 import { PricingSection } from './components/sections/PricingSection';
 import { Footer } from './components/sections/Footer';
-import { NotFound } from './components/pages/NotFound'; // 1. Nossa nova tela importada aqui!
+import { NotFound } from './components/pages/NotFound';
 import { ComparisonSection } from './components/sections/ComparisonSection';
 import { PracticalUseSection } from './components/sections/PracticalUseSection';
 import { ResultsSection } from './components/sections/ResultsSection';
 import { SetupPremiumSection } from './components/sections/SetupPremiumSection';
 import { LeadCaptureSection } from './components/sections/LeadCaptureSection';
+import { EbookLanding } from './components/pages/EbookLanding';
 
 const App: React.FC = () => {
-  // 2. O Interceptador: Se a URL for /login ou /404, ele trava e mostra o terminal restrito.
   const currentPath = window.location.pathname;
+
+  // 1. O Interceptador de Rotas: 
+  // Se for /login ou /404, mostra o terminal restrito.
   if (currentPath === '/login' || currentPath === '/404') {
     return <NotFound />;
   }
 
-  // 3. Se for a URL normal (/), o site carrega a vitrine completa.
+  // 2. Rota do Playbook:
+  // Se o usuário acessar /guia-neural, carregamos APENAS a Landing Page do E-book.
+  if (currentPath === '/guia-neural') {
+    return <EbookLanding />;
+  }
+
+  // 3. Vitrine Principal (Home):
+  // Se for qualquer outro caminho (como a "/" ), carrega o site completo.
   return (
     <div className="bg-[#09090E] min-h-screen text-white selection:bg-emerald-500/30 font-sans">
       <NeuralBackground />

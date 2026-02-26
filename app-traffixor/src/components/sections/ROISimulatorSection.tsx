@@ -55,7 +55,7 @@ export const ROISimulatorSection: React.FC = () => {
             </GlassCard>
           </div>
           <GlassCard className="p-8 h-full flex flex-col justify-center min-h-[400px] relative overflow-hidden">
-            
+
             {/* Efeito vermelho no fundo para reforçar a "perda" */}
             {showResult && (
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-500/5 rounded-full blur-[100px] pointer-events-none" />
@@ -71,23 +71,26 @@ export const ROISimulatorSection: React.FC = () => {
                   <p className="text-sm text-slate-400 mb-2">
                     {t('roi.result_title', 'Você está deixando na mesa aproximadamente:')}
                   </p>
-                  
+
                   {/* Resultado em Vermelho (Psicologia da Aversão à Perda) */}
                   <p className="text-5xl md:text-6xl font-bold text-red-400 drop-shadow-[0_0_15px_rgba(248,113,113,0.2)]">
                     R$ {Math.round(lift).toLocaleString('pt-BR')} <span className="text-xl text-slate-500 font-normal">/mês</span>
                   </p>
-                  
+
                   <p className="text-sm text-slate-400 mt-4 leading-relaxed">
-                    {t('roi.result_sub', 'Isso representa uma perda anual projetada de ')}
-                    <span className="text-white font-bold">R$ {Math.round(lift * 12).toLocaleString('pt-BR')}</span>
-                    {' por depender de processos manuais e integrações frágeis.'}
+                    {/* Removendo a frase longa de dentro da tradução para evitar o eco */}
+                    {t('roi.result_sub_prefix', 'Isso representa uma perda anual projetada de ')}
+                    <span className="text-white font-bold text-lg">
+                      R$ {Math.round(lift * 12).toLocaleString('pt-BR')}
+                    </span>
+                    {t('roi.result_sub_suffix', ' por depender de processos manuais e integrações frágeis.')}
                   </p>
                 </div>
 
                 <div className="space-y-4 p-5 bg-emerald-500/5 border border-emerald-500/10 rounded-xl">
-                   <p className="text-sm text-emerald-100/80">
-                     A Traffixor estanca esse sangramento através da recuperação automatizada de leads, follow-ups neurais e otimização de conversão em tempo real.
-                   </p>
+                  <p className="text-sm text-emerald-100/80">
+                    A Traffixor estanca esse sangramento através da recuperação automatizada de leads, follow-ups neurais e otimização de conversão em tempo real.
+                  </p>
                 </div>
 
                 <NeonButton

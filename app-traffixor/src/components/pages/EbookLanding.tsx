@@ -42,7 +42,10 @@ export const EbookLanding: React.FC = () => {
       });
 
       if (response.ok) {
-        // 🚀 A MÁGICA ACONTECE AQUI: O funil avança e redireciona o lead na hora!
+        // 🧠 A INJEÇÃO NEURAL: Salva o nome do lead no navegador para a página de Obrigado usar
+        localStorage.setItem('traffixor_lead_name', nome);
+
+        // 🚀 O REDIRECIONAMENTO: O funil avança
         window.location.href = '/obrigado';
       } else {
         throw new Error("Falha na comunicação com a infraestrutura.");

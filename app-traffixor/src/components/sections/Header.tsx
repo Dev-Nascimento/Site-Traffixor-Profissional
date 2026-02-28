@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NeonButton } from '../ui/NeonButton';
-import { TraffixorLogo } from '../ui/TraffixorLogo'; // 1. Componente de marca importado
+import { TraffixorLogo } from '../ui/TraffixorLogo';
 
 export const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -68,8 +68,9 @@ export const Header: React.FC = () => {
             {t('nav.login', 'Login')}
           </NeonButton>
 
-          <NeonButton onClick={() => window.open('https://wa.me/5521984834409?text=Ol%C3%A1%21+Quero+começar+a+minha+automação+com+a+Traffixor%C3%A7%C3%A3o.', '_blank')}>
-            {t('nav.trial', 'Começar Grátis')}
+          {/* 🚀 O GATILHO DO FUNIL NO TOPO DO SITE */}
+          <NeonButton onClick={() => window.location.href = '/guia-neural'}>
+            {t('nav.playbook', 'Baixar Playbook')}
           </NeonButton>
         </div>
 
@@ -112,8 +113,15 @@ export const Header: React.FC = () => {
             ))}
             
             <div className="pt-4 grid grid-cols-1 gap-4">
-              <NeonButton variant="secondary" className="w-full justify-center">{t('nav.login', 'Login')}</NeonButton>
-              <NeonButton className="w-full justify-center">{t('nav.trial', 'Começar Grátis')}</NeonButton>
+              {/* Ajustei o Login mobile para funcionar também */}
+              <NeonButton variant="secondary" className="w-full justify-center" onClick={() => window.location.href = '/login'}>
+                {t('nav.login', 'Login')}
+              </NeonButton>
+              
+              {/* O GATILHO DO FUNIL NO CELULAR */}
+              <NeonButton className="w-full justify-center" onClick={() => window.location.href = '/guia-neural'}>
+                {t('nav.playbook', 'Baixar Playbook')}
+              </NeonButton>
             </div>
           </nav>
         </div>

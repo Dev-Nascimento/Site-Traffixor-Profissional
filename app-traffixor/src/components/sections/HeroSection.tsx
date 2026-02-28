@@ -64,12 +64,14 @@ export const HeroSection: React.FC = () => {
 
         {/* Botões */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          
+          {/* 🚀 O GATILHO DO FUNIL NA VITRINE PRINCIPAL */}
           <NeonButton 
             variant="primary" 
             className="w-full sm:w-auto"
-            onClick={() => window.open('https://wa.me/5521984834409?text=Ol%C3%A1%21+Quero+iniciar+a+automa%C3%A7%C3%A3o+na+minha+empresa.', '_blank')}
+            onClick={() => window.location.href = '/guia-neural'}
           >
-            {t('hero.cta_primary')}
+            {t('hero.cta_primary', 'Baixar Playbook Gratuito')}
           </NeonButton>
           
           <NeonButton 

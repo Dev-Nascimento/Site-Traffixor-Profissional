@@ -6,7 +6,6 @@ export const EbookLanding: React.FC = () => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleCapture = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,7 +25,7 @@ export const EbookLanding: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // A PONTE: Substitua a URL abaixo pelo link que o Make gerou para você
+      // O seu Webhook do Make
       const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/e259azoj0goxwijx3c9qixf53dcm8vb0";
 
       const response = await fetch(MAKE_WEBHOOK_URL, {
@@ -43,9 +42,8 @@ export const EbookLanding: React.FC = () => {
       });
 
       if (response.ok) {
-        setIsSubmitting(false);
-        setIsSuccess(true);
-        console.log("LEAD ENVIADO PARA O MAKE COM SUCESSO!");
+        // 🚀 A MÁGICA ACONTECE AQUI: O funil avança e redireciona o lead na hora!
+        window.location.href = '/obrigado';
       } else {
         throw new Error("Falha na comunicação com a infraestrutura.");
       }
@@ -119,72 +117,40 @@ export const EbookLanding: React.FC = () => {
           <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-2xl blur opacity-20 transition duration-1000"></div>
           <div className="relative bg-black/40 backdrop-blur-xl border border-white/10 p-8 rounded-2xl shadow-2xl min-h-[400px] flex flex-col justify-center">
             
-            {!isSuccess ? (
-              // ESTADO 1: FORMULÁRIO DE CAPTURA
-              <div className="animate-in fade-in duration-500">
-                <h3 className="text-2xl font-bold mb-2">Acesso Restrito</h3>
-                <p className="text-slate-500 text-sm mb-6">Enviaremos o documento oficial diretamente para o seu e-mail.</p>
-                
-                <form className="space-y-4" onSubmit={handleCapture}>
-                  <div>
-                    <input 
-                      type="text" 
-                      placeholder="Seu Nome Completo" 
-                      value={nome}
-                      onChange={(e) => setNome(e.target.value)}
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 outline-none focus:border-emerald-500 transition-colors" 
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                  <div>
-                    <input 
-                      type="email" 
-                      placeholder="Seu melhor e-mail (Não use e-mail falso)" 
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 outline-none focus:border-emerald-500 transition-colors" 
-                      disabled={isSubmitting}
-                    />
-                  </div>
-
-                  <NeonButton 
-                    className="w-full py-4 justify-center text-lg mt-4" 
+            <div className="animate-in fade-in duration-500">
+              <h3 className="text-2xl font-bold mb-2">Acesso Restrito</h3>
+              <p className="text-slate-500 text-sm mb-6">Enviaremos o documento oficial diretamente para o seu e-mail.</p>
+              
+              <form className="space-y-4" onSubmit={handleCapture}>
+                <div>
+                  <input 
+                    type="text" 
+                    placeholder="Seu Nome Completo" 
+                    value={nome}
+                    onChange={(e) => setNome(e.target.value)}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 outline-none focus:border-emerald-500 transition-colors" 
                     disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Criptografando Dados...' : 'ENVIAR PLAYBOOK PARA MEU E-MAIL'}
-                  </NeonButton>
-                </form>
-              </div>
-            ) : (
-              // ESTADO 2: TELA DE SUCESSO
-              <div className="text-center animate-in zoom-in duration-500 py-8">
-                <div className="w-20 h-20 mx-auto bg-emerald-500/20 rounded-full flex items-center justify-center mb-6 border border-emerald-500/50">
-                  <svg 
-                    className="w-10 h-10 text-emerald-400" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" 
-                    />
-                  </svg>
+                  />
                 </div>
-                <h3 className="text-2xl font-bold text-emerald-400 mb-2">Acesso Liberado!</h3>
-                <p className="text-slate-300 text-lg mb-4">
-                  O Playbook Neural foi enviado para: <br/>
-                  <span className="font-bold text-white">{email}</span>
-                </p>
-                <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg inline-block">
-                  <p className="text-sm text-red-200">
-                    <strong>Atenção:</strong> Verifique sua caixa de Spam ou Promoções. O link de acesso expira em breve.
-                  </p>
+                <div>
+                  <input 
+                    type="email" 
+                    placeholder="Seu melhor e-mail (Não use e-mail falso)" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 outline-none focus:border-emerald-500 transition-colors" 
+                    disabled={isSubmitting}
+                  />
                 </div>
-              </div>
-            )}
+
+                <NeonButton 
+                  className="w-full py-4 justify-center text-lg mt-4" 
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Criptografando Dados...' : 'ENVIAR PLAYBOOK PARA MEU E-MAIL'}
+                </NeonButton>
+              </form>
+            </div>
 
           </div>
         </div>

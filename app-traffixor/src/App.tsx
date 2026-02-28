@@ -15,6 +15,7 @@ import { ResultsSection } from './components/sections/ResultsSection';
 import { SetupPremiumSection } from './components/sections/SetupPremiumSection';
 import { LeadCaptureSection } from './components/sections/LeadCaptureSection';
 import { EbookLanding } from './components/pages/EbookLanding';
+import Obrigado from './components/pages/Obrigado';
 
 const App: React.FC = () => {
   const currentPath = window.location.pathname;
@@ -31,7 +32,13 @@ const App: React.FC = () => {
     return <EbookLanding />;
   }
 
-  // 3. Vitrine Principal (Home):
+  // 3. Rota da Página de Obrigado (Pós-Conversão):
+  // Aqui a mágica acontece. Se a URL for /obrigado, mostra a tela de agendamento.
+  if (currentPath === '/obrigado') {
+    return <Obrigado />;
+  }
+
+  // 4. Vitrine Principal (Home):
   // Se for qualquer outro caminho (como a "/" ), carrega o site completo.
   return (
     <div className="bg-[#09090E] min-h-screen text-white selection:bg-emerald-500/30 font-sans">
